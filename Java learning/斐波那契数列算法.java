@@ -20,10 +20,11 @@ public class Fibonacci_sequence{
 import java.util.Scanner;
 public class Fibonacci_sequence{
     public static void main(String[] args) {
-    Scanner sc =new Scanner(System.in);
-    int fib = sc.nextInt();
-    int value = getNum(fib);
-    System.out.println(value);
+        System.out.print("请输入第n项：");
+        Scanner sc =new Scanner(System.in);
+        int fib = sc.nextInt();
+        int value = getNum(fib);
+        System.out.print("第n项对应的数字为："+value);
     }
     public static  int getNum(int n) {
         int num;
