@@ -1,4 +1,4 @@
-/*冒泡排序算法(BubbleSort)·*/
+/*冒泡排序算法(BubbleSort)·基础算法*/
 import java.util.Arrays;
 public class Bubble_Sort {
     public static void main(String[] args) {
@@ -11,6 +11,28 @@ public class Bubble_Sort {
                     arr [j] = temp;
                 }
             }
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+}
+——————————————————————————————————————————————————————————————————————————————————————————————————
+/*冒泡排序算法(BubbleSort)·优化算法*/
+import java.util.Arrays;
+public class Bubble_Sort {
+    public static void main(String[] args) {
+        int[] arr = new int[]{3, 5, 7, 2, 9, 0, 6, 1, 8, 4};
+
+        for (int i = 0; i < arr.length - 1; i++) {
+           boolean flat = false;
+            for (int j = 0; j < arr.length - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int temp = arr[j + 1];
+                    arr[j + 1] = arr[j];
+                    arr[j] = temp;
+                    flat = true;
+                }
+            }
+            if (!flat) break;
         }
         System.out.println(Arrays.toString(arr));
     }
