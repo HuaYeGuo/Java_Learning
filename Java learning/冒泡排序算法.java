@@ -16,6 +16,7 @@ public class Bubble_Sort {
     }
 }
 ——————————————————————————————————————————————————————————————————————————————————————————————————
+/*冒泡排序算法(BubbleSort)·*/
 import java.util.Scanner;
 public class Bubble_Sort {
 
@@ -30,12 +31,11 @@ public class Bubble_Sort {
         }
 
         for(int j=0;j<arr.length;j++){
-            for(int k=j;k<arr.length;k++){
-                int bigger = arr[j];
-                if(arr[j]>arr[k]){
-                    bigger = arr[j];
-                    arr[j] = arr[k];
-                    arr[k] = bigger;
+            for(int k=0;k<arr.length - j-1;k++){
+                if(arr[k]>arr[k+1]){
+                    int temp = arr[k+1];
+                    arr[k+1] = arr[k];
+                    arr[k] = temp;
                 }
             }
         }
