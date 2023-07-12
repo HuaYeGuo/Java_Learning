@@ -21,7 +21,6 @@ import java.util.Arrays;
 public class Bubble_Sort {
     public static void main(String[] args) {
         int[] arr = new int[]{3, 5, 7, 2, 9, 0, 6, 1, 8, 4};
-
         for (int i = 0; i < arr.length - 1; i++) {
            boolean flat = false;
             for (int j = 0; j < arr.length - i - 1; j++) {
@@ -38,10 +37,9 @@ public class Bubble_Sort {
     }
 }
 ——————————————————————————————————————————————————————————————————————————————————————————————————
-/*冒泡排序算法(BubbleSort)·*/
+/*冒泡排序算法(BubbleSort)·进阶算法*/
 import java.util.Scanner;
 public class Bubble_Sort {
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("请输入您要输入的数字个数：");
@@ -51,15 +49,17 @@ public class Bubble_Sort {
             System.out.println("请输入第"+(i+1)+"个数字：");
             arr[i] = sc.nextInt();
         }
-
-        for(int j=0;j<arr.length;j++){
+        for(int j=0;j<arr.length - 1;j++){
+            boolean flat = false;
             for(int k=0;k<arr.length - j-1;k++){
                 if(arr[k]>arr[k+1]){
                     int temp = arr[k+1];
                     arr[k+1] = arr[k];
                     arr[k] = temp;
+                    flat = true;
                 }
             }
+           if (!flat)break;;
         }
         System.out.println("您输入的数字从小到大的排序为:");
         for(int i=0;i<arr.length;i++)
